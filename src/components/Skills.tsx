@@ -45,13 +45,13 @@ const Skills = () => {
 
   const tools = [
     { name: "JavaScript", icon: SiJavascript, color: "#f7df1e" },
+    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
     { name: "Python", icon: SiPython, color: "#3776AB" },
     { name: "React", icon: SiReact, color: "#61DAFB" },
     { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
     { name: "Node.js", icon: SiNodedotjs, color: "#68A063" },
     { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
     { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
-    { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     { name: "Git", icon: SiGit, color: "#F05032" },
     { name: "GitHub", icon: SiGithub, color: "#ffffff" },
@@ -89,7 +89,7 @@ const Skills = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
         {/* Title */}
         <h2
-          className={`text-4xl sm:text-5xl font-bold text-center mb-6 h-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-1000 ${
+          className={`text-4xl sm:text-5xl font-bold text-center mb-6 sm:h-16 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent transition-all duration-1000 ${
             isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
           }`}
         >
@@ -128,7 +128,7 @@ const Skills = () => {
             {tools.map(({ name, icon: Icon, color }, i) => (
               <Card
                 key={name}
-                className={`p-4 bg-card/70 backdrop-blur-md border-border hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
+                className={`p-4 bg-card/70 backdrop-blur-md border-border hover:border-primary/40 transition-all duration-100 hover:scale-105 hover:shadow-lg ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: `${i * 0.03}s` }}

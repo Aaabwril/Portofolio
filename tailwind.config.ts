@@ -120,6 +120,14 @@ export default {
           "33%": { transform: "translateY(-15px) translateX(-10px) rotate(-120deg)" },
           "66%": { transform: "translateY(-25px) translateX(15px) rotate(-240deg)" },
         },
+        // "pan-slow": {
+        //   "0%, 100%": { transform: "translate(0, 0)" },
+        //   "50%": { transform: "translate(-50px, -50px)" },
+        // },
+        // "pan-slow-mobile": {
+        //   "0%, 100%": { transform: "translate(0, 0)" },
+        //   "50%": { transform: "translate(-20px, -20px)" },
+        // },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

@@ -34,6 +34,45 @@ const Hero = () => {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const [isWide, setIsWide] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      // SSR: just assume wide (or null); we'll set real value on client
+      return;
+    }
+
+    // match the same breakpoint you use in Tailwind: 640px = sm
+    const mq = window.matchMedia("(min-width: 640px)");
+
+    // set initial value
+    setIsWide(mq.matches);
+
+    // listener for changes
+    const handler = (e: MediaQueryListEvent) => setIsWide(e.matches);
+
+    // older browsers use addListener
+    if (mq.addEventListener) {
+      mq.addEventListener("change", handler);
+    } else {
+      // fallback
+      // @ts-ignore
+      mq.addListener(handler);
+    }
+
+    return () => {
+      if (mq.removeEventListener) {
+        mq.removeEventListener("change", handler);
+      } else {
+        // @ts-ignore
+        mq.removeListener(handler);
+      }
+    };
+  }, []);
+
+  // while SSR/initializing, render mobile version (or none) to avoid flicker
+  const animClass = isWide ? "animate-pan-slow" : "animate-pan-slow-mobile";
+  
   return (
     <section
       id="home"
@@ -45,24 +84,23 @@ const Hero = () => {
         className="absolute inset-0 opacity-100"
         style={{ transform: `translateY(${offsetSlow}px)` }}
       >
-        <svg
-          className="absolute inset-0 w-full h-full animate-pan-slow"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="xMidYMid slice"
-        >
+      <svg
+        className={`absolute inset-0 w-full h-full ${animClass}`}
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid slice">
           <defs>
             <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
-              <path
+               <path
                 d="M 80 0 L 0 0 0 80"
                 fill="none"
                 stroke="white"
                 strokeWidth="0.8"
-                opacity="0.08"
+                 opacity="0.08"
               />
             </pattern>
-          </defs>
+           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
-        </svg>
+         </svg>
       </div>
 
       {/* Layer 2: Medium-speed shapes */}

@@ -44,7 +44,7 @@ All colors MUST be HSL.
 }
 
 .animate-slow-pan {
-  animation: slow-pan 40s linear infinite;
+  animation: slow-pan 30s linear infinite;
 }
 
 .animate-particle {
@@ -52,8 +52,8 @@ All colors MUST be HSL.
 }
 
 @keyframes float-slow {
-  0%, 100% { transform: translateY(0) rotate(45deg); }
-  50% { transform: translateY(-40px) rotate(50deg); }
+  0%, 100% { transform: translateY(0) rotate(40deg); }
+  50% { transform: translateY(-60px) rotate(60deg); }
 }
 
 @keyframes float-delayed {
@@ -72,9 +72,23 @@ All colors MUST be HSL.
 }
 
 @keyframes pan-slow {
-  from { transform: translate(0, 0); }
-  to { transform: translate(-80px, -80px); }
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-80px, -80px);
+  }
 }
+
+@keyframes pan-slow-mobile {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-40px, -40px);
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     opacity: 0.4;
@@ -86,12 +100,13 @@ All colors MUST be HSL.
   }
 }
 
-
+/* Animation utilities */
 .animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
 .animate-float-delayed { animation: float-delayed 8.4s ease-in-out infinite; }
 .animate-float-slower { animation: float-slower 6s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
-.animate-pan-slow { animation: pan-slow 4s linear infinite; }
+.animate-pan-slow { animation: pan-slow 6s linear infinite; }
+.animate-pan-slow-mobile { animation: pan-slow-mobile 40s linear infinite; }
 
 @layer base {
   :root {
