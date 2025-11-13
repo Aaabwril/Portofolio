@@ -41,7 +41,7 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Aaabwril"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary/10 flex items-center justify-center transition-colors"
