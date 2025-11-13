@@ -10,33 +10,37 @@ const Projects = () => {
   
   const projects = [
     {
-      title: "AI Chat Assistant",
-      description: "A conversational AI chatbot built with React and integrated with OpenAI API. Features real-time responses and context awareness.",
-      tags: ["React", "AI", "TypeScript", "Tailwind"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      title: "Cloud Storage",
+      description: "A secure cloud storage solution where users can upload, manage, and share files with ease. Features include file organization, sharing capabilities, and secure access control.",
+      tags: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
+      liveUrl: "https://cloud-storage-fawn-mu.vercel.app",
+      githubUrl: "https://github.com/Aaabwril/cloude-storage",
     },
     {
-      title: "E-Commerce Dashboard",
-      description: "Full-featured admin dashboard for e-commerce management. Built with Next.js and Supabase for real-time data updates.",
-      tags: ["Next.js", "Supabase", "PostgreSQL"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      title: "EduSphere - School CMS",
+      description: "A comprehensive Content Management System for schools, allowing administrators to publish articles about school-industry relations and PKL (Work Practice) programs at SMKN 1 Binjai. Features include article management, user roles, and responsive design.",
+      tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind", "NextAuth"],
+      liveUrl: "https://edu-sphere-psi.vercel.app/",
+      githubUrl: "https://github.com/Aaabwril/EduSphere-public",
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management tool with real-time synchronization. Features drag-and-drop interface and team collaboration.",
-      tags: ["React", "Node.js", "WebSocket"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      title: "AI Study Assistant",
+      description: "Transform your study sessions with AI! Paste your notes and instantly generate flashcards, quizzes, and summaries. Features user authentication, saved study history, and a polished, intuitive interface.",
+      tags: ["AI/ML", "Next.js", "TypeScript", "OpenAI", "Coming Soon"],
+      liveUrl: "#",
+      githubUrl: "#",
+      isComingSoon: true,
+      status: "Coming Soon"
     },
     {
-      title: "Portfolio Builder",
-      description: "SaaS platform that helps developers create beautiful portfolios in minutes. No-code solution with customizable templates.",
-      tags: ["Next.js", "Tailwind", "Stripe"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-    },
+      title: "AI Productivity Suite",
+      description: "An upcoming AI-powered productivity platform designed to streamline your workflow with intelligent task management, automated scheduling, and smart document processing. Stay tuned for updates!",
+      tags: ["AI/ML", "Next.js", "TypeScript", "Prisma", "Coming Soon"],
+      liveUrl: "#",
+      githubUrl: "#",
+      isComingSoon: true,
+      status: "Coming Soon"
+    }
   ];
 
   return (
@@ -86,28 +90,55 @@ const Projects = () => {
                   </div>
 
                   <div className="flex gap-4 pt-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-primary/50 hover:bg-primary/10 group/btn"
-                      asChild
-                    >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 group-hover/btn:scale-110 transition-transform" size={16} />
-                        Live Demo
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-primary/50 hover:bg-primary/10 group/btn"
-                      asChild
-                    >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="mr-2 group-hover/btn:scale-110 transition-transform" size={16} />
-                        Source Code
-                      </a>
-                    </Button>
+                    {project.isComingSoon ? (
+                      <>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-amber-400/50 bg-amber-400/10 text-amber-400 cursor-not-allowed"
+                          disabled
+                        >
+                          <span className="flex items-center">
+                            <span className="h-2 w-2 rounded-full bg-amber-400 mr-2"></span>
+                            Coming Soon
+                          </span>
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-amber-400/50 bg-amber-400/10 text-amber-400 cursor-not-allowed"
+                          disabled
+                        >
+                          <Github className="mr-2" size={16} />
+                          Coming Soon
+                        </Button>
+                      </>
+                    ) : (
+                      <>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-primary/50 hover:bg-primary/10 group/btn"
+                          asChild
+                        >
+                          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 group-hover/btn:scale-110 transition-transform" size={16} />
+                            Live Demo
+                          </a>
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-primary/50 hover:bg-primary/10 group/btn"
+                          asChild
+                        >
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="mr-2 group-hover/btn:scale-110 transition-transform" size={16} />
+                            Source Code
+                          </a>
+                        </Button>
+                      </>
+                    )}
                   </div>
                 </div>
               </Card>

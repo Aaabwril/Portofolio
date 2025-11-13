@@ -10,9 +10,9 @@ const About = () => {
 
   const highlights = [
     { icon: Code2, label: "Clean Code", emoji: "✨", color: "from-primary to-accent" },
-    { icon: Sparkles, label: "AI Integration", emoji: "🤖", color: "from-accent to-primary" },
-    { icon: Coffee, label: "Always Learning", emoji: "📚", color: "from-primary to-accent" },
     { icon: Zap, label: "Performance", emoji: "⚡", color: "from-accent to-primary" },
+    { icon: Coffee, label: "Always Learning", emoji: "📚", color: "from-primary to-accent" },
+    { icon: Rocket, label: "Problem Solving", emoji: "🔍", color: "from-accent to-primary" },
   ];
 
   return (
@@ -36,8 +36,8 @@ const About = () => {
               <div className="space-y-4">
                 <p className="text-lg text-foreground/90 leading-relaxed">
                   Hey there! 👋 I'm a <span className="text-primary font-semibold">fullstack developer</span> who 
-                  loves crafting efficient, user-focused apps. I enjoy working with React, Next.js, and Supabase, 
-                  and recently exploring <span className="text-accent font-semibold">AI integrations</span>.
+                  loves crafting efficient, user-focused applications. I specialize in building modern web 
+                  applications using <span className="text-accent font-semibold">React, Next.js, and TypeScript</span>.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   My passion lies in building products that solve real problems while delivering 

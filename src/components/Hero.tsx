@@ -4,10 +4,11 @@ import { useParallax } from "@/hooks/use-parallax";
 import { useEffect, useState } from "react";
 
 const phrases = [
-  "Fullstack Developer building modern, AI-integrated web apps",
-  "Creating responsive and beautiful UI with React & Tailwind",
-  "Passionate about AI, open-source, and web performance",
-  "Building projects that solve real-world problems",
+  "Fullstack Developer crafting modern web applications",
+  "Building responsive and beautiful UI with React & TypeScript",
+  "Passionate about clean code and exceptional user experiences",
+  "Creating solutions that make a real impact",
+  "Transforming ideas into functional, elegant applications"
 ];
 
 const Hero = () => {
