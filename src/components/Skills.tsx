@@ -76,6 +76,8 @@ const Skills = () => {
     { name: "React", icon: SiReact, color: "#61DAFB", categories: ['frontend'] },
     { name: "Next.js", icon: SiNextdotjs, color: "#ffffff", categories: ['frontend', 'backend'] },
     { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4", categories: ['frontend'] },
+    { name: "DaisyUI", icon: SiDaisyui, color: "#F472B6", categories: ['frontend'] }, 
+    { name: "shadcn/ui", icon: SiShadcnui, color: "#A855F7", categories: ['frontend'] },
     { name: "Framer Motion", icon: SiFramer, color: "#0055FF", categories: ['frontend'] },
     { name: "Vite", icon: SiVite, color: "#646CFF", categories: ['frontend', 'tools'] },
     

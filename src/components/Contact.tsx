@@ -91,7 +91,7 @@ const Contact = () => {
               </div>
 
               {/* Socials */}
-              <div className="flex gap-4 pt-4">
+              {/* <div className="flex gap-4 pt-4">
                 <a
                   href="https://github.com/Aaabwril"
                   target="_blank"
@@ -120,7 +120,7 @@ const Contact = () => {
                     <path d="M19 0H5C2.239 0 0 2.239 0 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zm-1.5-12.268A1.764 1.764 0 1 1 8.25 4.97a1.764 1.764 0 0 1-1.75 1.762zM19 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
                   </svg>
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Right side form */}
