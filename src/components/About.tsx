@@ -47,10 +47,11 @@ const About = () => {
               </div>
               <Button
                 variant="outline"
-                className="border-primary/50 hover:bg-primary/10 hover:scale-105 transition-all group mt-4"
+                disabled
+                className="border-yellow-500/50 text-yellow-500 hover:bg-yellow-500/10 transition-all group mt-4 relative overflow-hidden"
               >
-                <Download className="mr-2 group-hover:translate-y-1 transition-transform" size={18} />
-                Download Resume
+                <Download className="w-4 h-4 mr-2" />
+               Resume Coming Soon
               </Button>
             </div>
 
